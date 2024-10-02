@@ -38,16 +38,28 @@ function App() {
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-pink-300 mb-4">
             <img
               src="/placeholder.svg?height=128&width=128"
-              alt="Baby Alice"
+              alt="Baby Eloah"
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-2xl font-bold text-pink-500 mb-2">Candy Party da Alice</h1>
+          <h1 className="text-2xl font-bold text-pink-500 mb-2">Candy Party da Eloah</h1>
           <p className="text-gray-500 text-center italic py-4 pb-2">
             "Um dia especial deve ser comemorado com pessoas especiais"
           </p>
-          <p className="text-4xl font-bold text-pink-500 py-4">20/06 às 15h</p>
-          <p className="text-gray-600 text-sm p-1 border border-slate-300 rounded-md font-semibold mb-6">Rua dos Doces, n30, Bairro Felicidade</p>
+          <p className="text-4xl font-bold text-pink-500 py-4">30/11 às 18h</p>
+          <p className="text-gray-600 text-sm p-1 px-4 my-4 border border-blue-400 rounded-md font-semibold mb-6 flex justify-center items-center">
+            <a
+              href="https://maps.app.goo.gl/v45XaHHT9NwvqqPM8"
+              target='_blank'
+            >
+              🎈 Veja como chegar
+            </a>
+            <img
+              src="/arrow.png"
+              className='ml-2'
+              alt=""
+            />
+          </p>
           <p className="self-start text-gray-600 mb-2">Confirme sua presença aqui!</p>
           <input
             type="text"
