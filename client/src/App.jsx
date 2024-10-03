@@ -1,12 +1,33 @@
 import { useState, useEffect } from 'react'
 import ReactConfetti from 'react-confetti'
 import EmojiBackground from './EmojiBackground'
+import axios from 'axios'
+import baseUrl from './baseUrl'
 
 function App() {
 
   const [name, setName] = useState('')
   const [companion, setCompanion] = useState('')
   const [isAnimated, setIsAnimated] = useState(false)
+
+
+  async function sendConfirmationMessage() {
+    try {
+      const messagePayload = {
+        nome: name,
+        acompanhante: companion
+      }
+
+      const response = await axios.post(`${baseUrl.production}/confirmacao`, messagePayload)
+      alert(response.data?.message)
+
+      setName('')
+      setCompanion('')
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
   return (
     <div className='flex justify-center h-screen'>
@@ -55,7 +76,10 @@ function App() {
             onChange={(e) => setCompanion(e.target.value)}
             className="mb-6 p-2 border border-black w-full rounded-md bg-transparent text-black"
           />
-          <button className="w-full cursor-pointer font-semibold bg-pink-500 hover:bg-pink-600 text-white p-2 rounded-md">
+          <button
+            className="w-full cursor-pointer font-semibold bg-pink-500 hover:bg-pink-600 text-white p-2 rounded-md"
+            onClick={() => sendConfirmationMessage()}
+          >
             Eu Vou!
           </button>
         </div>
