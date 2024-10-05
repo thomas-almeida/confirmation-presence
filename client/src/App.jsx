@@ -60,7 +60,7 @@ function App() {
             <img
               src="/baby.jpg"
               alt="Baby Eloah"
-              className="w-full h-full"
+              className="w-full h-full rounded-full object-cover my-1"
             />
           </div>
           <h1 className="text-2xl font-bold text-pink-500 mb-2">Candy Party da Eloah</h1>
