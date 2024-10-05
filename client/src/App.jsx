@@ -58,7 +58,7 @@ function App() {
         <div className="flex flex-col items-center p-6 z-0 bg-white rounded-lg shadow-lg">
           <div className="w-32 h-32 overflow-hidden">
             <img
-              src="/fake-baby.png"
+              src="/baby.jpeg"
               alt="Baby Eloah"
               className="w-full h-full"
             />
