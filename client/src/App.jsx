@@ -56,11 +56,11 @@ function App() {
       <div className='w-[85%] flex items-center justify-center'>
         <EmojiBackground animated={isAnimated} />
         <div className="flex flex-col items-center p-6 z-0 bg-white rounded-lg shadow-lg">
-          <div className="w-32 h-32 overflow-hidden">
+          <div className="overflow-hidden">
             <img
               src="/baby.jpg"
               alt="Baby Eloah"
-              className="w-full h-full rounded-full object-cover my-1"
+              className="w-[120px] h-[120px] rounded-full object-cover object-top shadow-md my-1"
             />
           </div>
           <h1 className="text-2xl font-bold text-pink-500 mb-2">Candy Party da Eloah</h1>
